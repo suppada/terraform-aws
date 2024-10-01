@@ -3,7 +3,7 @@ name: Terraform Cleanup
 on:
   push:
     branches:
-      - develop
+      - main
   workflow_dispatch:
   schedule:
     - cron: '0 0 * * *' # Runs every day at midnight
