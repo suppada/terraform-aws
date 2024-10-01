@@ -2,7 +2,7 @@ name: Terraform CI/CD
 
 on:
   push:
-    branches: [ develop ]
+    branches: [ main ]
   pull_request:
     branches: [ develop ]
 
@@ -56,5 +56,5 @@ jobs:
       run: terraform plan -out=tfplan
 
     - name: 'Terraform Apply'
-      if: github.ref == 'refs/heads/develop'
+      if: github.ref == 'refs/heads/main'
       run: terraform apply -auto-approve tfplan
