@@ -1,7 +1,7 @@
 resource "aws_instance" "ec2_instance" {
   count                       = var.ec2_count
   instance_type               = var.instance_type
-  ami                         = var.ami_id
+  ami                         = "ami-0fc82f4dabc05670b"
   key_name                    = var.key_name
   vpc_security_group_ids      = [aws_security_group.sg.id]
   iam_instance_profile        = aws_iam_instance_profile.profile.name
