@@ -2,18 +2,14 @@ variable "ec2_count" {
   type    = string
   default = "3"
 }
-# variable "ami_id" {
-#   type    = string
-#   default = "ami-037774efca2da0726"
-# }
+variable "ami_id" {
+  type    = string
+  default = "ami-0fc82f4dabc05670b"
+}
 variable "instance_type" {
   type    = string
   default = "t2.micro"
 }
-# variable "s3_bucket" {
-#   type    = string
-#   default = "terraform-gitactions"
-# }
 variable "key_name" {
   type    = string
   default = "dev"
